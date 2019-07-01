@@ -26,9 +26,6 @@ class Post(models.Model):
 
     def is_upperclass(self):
         return self.status_meta in (self.LONGEDESERCONCLUIDA, self.NAOINICIADA)
-#########      
-#########
-
     def publish(self):
         self.published_date = timezone.now()
         self.save()
